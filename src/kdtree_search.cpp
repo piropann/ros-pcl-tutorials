@@ -1,5 +1,4 @@
 //kdtree
-//重心をもとに点群を減らす（ダウンサンプリング）
 #include <ros/ros.h>
 #include <ros/package.h>
 #include <sensor_msgs/PointCloud2.h>
@@ -68,7 +67,7 @@ int main(int argc, char **argv)
                     << " (squared distance: " << pointKNNSquaredDistance[i] << ")" << std::endl;
     }
 
-    // Neighbors within radius search
+    // 半径で探索を行う
 
     std::vector<int> pointIdxRadiusSearch;
     std::vector<float> pointRadiusSquaredDistance;
@@ -90,7 +89,6 @@ int main(int argc, char **argv)
                         << " (squared distance: " << pointRadiusSquaredDistance[i] << ")" << std::endl;
     }
 
-    //sensor_msgs::PointCloud2 cloud_ros;
     pcl::toROSMsg(*cloud,cloud_ros);
     cloud_ros.header.frame_id = "base_link";
 

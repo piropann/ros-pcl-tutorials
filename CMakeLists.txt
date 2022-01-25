@@ -41,8 +41,8 @@ link_directories(${PCL_LIBRARY_DIRS})
 add_executable(passthrough src/passthrough.cpp)
 target_link_libraries(passthrough ${catkin_LIBRARIES} ${PCL_LIBRARIES})
 
-#add_executable(tra src/tra.cpp)
-#target_link_libraries(tra ${catkin_LIBRARIES} ${PCL_LIBRARIES})
+add_executable(tra src/transforms.cpp)
+target_link_libraries(tra ${catkin_LIBRARIES} ${PCL_LIBRARIES})
 
 add_executable(voxel src/voxel_grid.cpp)
 target_link_libraries(voxel ${catkin_LIBRARIES} ${PCL_LIBRARIES})
@@ -52,3 +52,9 @@ target_link_libraries(statistical ${catkin_LIBRARIES} ${PCL_LIBRARIES})
 
 add_executable(kd_tree src/kdtree_search.cpp)
 target_link_libraries(kd_tree ${catkin_LIBRARIES} ${PCL_LIBRARIES})
+
+add_executable(icp src/icp.cpp)
+target_link_libraries(icp ${catkin_LIBRARIES} ${PCL_LIBRARIES})
+
+add_executable(resampling src/resampling.cpp)
+target_link_libraries(resampling ${catkin_LIBRARIES} ${PCL_LIBRARIES})
