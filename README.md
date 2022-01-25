@@ -1,7 +1,6 @@
 # ros-pcl-tutorials
 
-- [Point Cloud Library](https://pcl.readthedocs.io/projects/tutorials/en/master/index.html)のサンプルプログラムの一部をROS環境で動作できるようにしています。
-
+[Point Cloud Library](https://pcl.readthedocs.io/projects/tutorials/en/master/index.html)のサンプルプログラムの一部をROS環境で動作できるようにしています。
 サンプルコードに解説を追加して、学びの促進を目指しています。
 
 ## 動作環境
